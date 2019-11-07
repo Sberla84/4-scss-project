@@ -1,0 +1,73 @@
+
+/*  media queries */
+
+@mixin media {
+    @media (min-width: $med-tab) {
+        @content;
+    }
+}
+
+/* COL WIDTH LARGER SCREEN*/
+
+
+@mixin colwid($map) {
+    @each $cols, $flex-b in $map {
+        &-#{$cols} {
+            @include media {
+            flex-basis: $flex-b;
+            }
+        }
+    }
+}
+
+
+
+
+/*  mobile first  */
+
+@mixin gridsys($map) {
+    @each $theme, $background-color in $map {
+        &-#{$theme} {
+            background-color: $background-color;
+        }
+    }
+}
+
+
+@mixin btnsys($map) {
+    @each $theme, $background-color in $map {
+        &.#{$theme} {
+            background-color: $background-color;
+            transition: $background-color 0.5s ease-in-out;
+        }
+        &.#{$theme}:hover {
+            background-color: lighten($background-color, 20%)
+        }
+    }
+}
+
+@mixin img(
+    $disp:block,
+    $mar-l: auto,
+    $mar-r: auto,
+    $mar-t: null,
+    $max-w: null
+        ) {
+          display: $disp;
+          margin-left: $mar-l;
+          margin-right: $mar-r;
+          margin-top: $mar-t;
+          max-width: $max-w;
+}
+
+@mixin flexy(
+    $disp: flex,
+    $f-dir: null,
+    $f-wrap: null,
+    $just-c: null
+        ){
+         display: $disp;
+         flex-direction: $f-dir;
+         flex-wrap: $f-wrap;
+         justify-content: $just-c;
+         }

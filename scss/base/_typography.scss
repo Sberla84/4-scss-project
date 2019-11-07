@@ -1,0 +1,47 @@
+
+
+  /*  BASE  Typography   */
+  * {
+    font-family: $fontfam-primary;
+    color:$secondary-col;
+    box-sizing: border-box;
+  }
+  
+  p {
+    line-height: 1.45em;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+
+
+
+/* Specific Typography   */
+
+
+
+ .headline-primary {
+    color: $primary-col;
+    margin-left: 10px;
+  }
+  
+  .headline-secondary {
+    font-weight: $font-weight-light;
+    color:$secondary-col;
+  }
+  
+  .link {
+    color: $link-col;
+    font-weight: $font-weight-strong;
+  }
+  
+  .blockquote {
+    font-size: 1.5em;
+    font-weight: $font-weight-light;
+    font-style: italic;
+    margin-left: 20px;
+    padding-left: 20px;
+    border-left: 8px solid $primary-col;
+    border-radius: 5px;
+  }

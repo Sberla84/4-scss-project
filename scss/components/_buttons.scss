@@ -1,0 +1,24 @@
+
+
+@include btnsys($btn-col);
+
+
+.btn {
+    margin-top: 15px;
+    width: 100%;
+    color: $white;
+    border: none;
+    padding: 10px 0;
+    text-transform: uppercase;
+    border-radius: 5px;
+    @include media {
+      padding:10px 30px;
+    }
+    & + & {
+      @include media{
+        margin-left: 10px;
+      }
+    }
+  }
+  
+ 
